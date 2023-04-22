@@ -9,11 +9,34 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    
+    <header>
+        <div id= 'highscores'>
+        </div>
+        <div id = 'timer'> </div>
+    </header>
+    <main>
+        <div id="welcome">
+            <h1>Welcome to Code Quiz</h1>
+            <button id="startQuiz" class="button"> "Start Quiz"</button>
+            <!-- maybe change to ready to start the quiz (im ready button?) changed btn to button-->
+        </div>
+        <div id="quiz" class="hidden">
+            <div id="question"></div>
 
+            <div id="options"></div>
 
-
-
+            <div id="message"></div>
+        </div>
+        <div id="result" class="hidden">
+            <div id="summary"></div>
+            <button id="viewscores" class="button"> View highscores</button>
+            <!--changed btn to button-->
+            <input type="text" id="initials" placeholder="Enter your initials" />
+            <button id = "saveScore" class="button">Save Score</button>
+            <!--changed btn to button-->
+            <button id="playAgain" class="button">Play Again</button>
+        </div>
+    </main>
 
 <!-- added link to JavaScript at the bottom of the page so that it renders last and therefore is less likely to error -->
     <script src="script.js"></script>

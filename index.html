@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coding Quiz</title>
     <link rel="stylesheet" href="reset.css" />
+    <!--reset is added first so that changes to style.css will overwrite this file as it is just a default-->
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -29,7 +30,7 @@
             <div id="question"></div>
 
             <div id="options"></div>
-            <!--answers and muliple choice options-->
+            <!--answers and muliple choice options maybe change to choices-->
 
             <div id="message"></div>
             <!--correct or wrong message tell the user what they scored-->
@@ -47,6 +48,7 @@
         <!--this starts off hidden but is visable at the end when the quiz is over-->
     </main>
 
+    <!--could add separate question js file and link here above script.js-->
 <!-- added link to JavaScript at the bottom of the page so that it renders last and therefore is less likely to error -->
     <script src="script.js"></script>
 </body>

@@ -100,7 +100,7 @@ var questions = [
 
   function onViewScores(e) {
     window.location.href = '';
-    //link to scores.html
+    //link to scores.html.........................................................
   }
 
   function onSelectAnswer(e) {
@@ -219,7 +219,7 @@ var scoresheet = document.getElementById("scoresheet")
 var backtoQuiz = document.getElementById("backtoquiz")
 
 function onBackToQuiz() {
-    window.location.href = "index.html";
+    window.location.href = "index.html"; //.............................................
 }
 
 for (var i = 0; i < localStorage.length; i++) {

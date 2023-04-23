@@ -36,9 +36,9 @@ var questions = [
 
   var startQuiz = document.getElementById("startQuiz")
   // jsn reccoments doing just this first
-  //var saveScore = document.getElementById("saveScore")
-  //var viewScore = document.getElementById("viewScore")
-  //var playAgain = document.getElementById("playAgain")
+  var saveScore = document.getElementById("saveScore")
+  var viewScore = document.getElementById("viewScore")
+  var playAgain = document.getElementById("playAgain")
 
   var welcome = document.getElementById("welcome")
   //welcome screen 
@@ -196,8 +196,16 @@ var questions = [
         secondsLeft--;
     }, 1000);
 
-    //hide welcome section
+    //hide welcome section - jsn comment
     welcome.style.display = "none";
     result.style.display = "none";
     quiz.style.display = 'flex';
+
+    //display the first question -jsn comment
+    displayQuestion();
   }
+
+startQuiz.addEventListener("click", onStartGame);
+SaveScore.addEventListener("click", onSaveScore);
+ViewScores.addEventListener("click", onViewScores);
+playAgain.addEventListener("click", onStartGame)

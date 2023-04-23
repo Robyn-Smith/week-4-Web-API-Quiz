@@ -67,7 +67,7 @@ var questions = [
   //timer/seconds left will decriment
   //score will increment dpending how many answered correct
   //current quesion so know which question you are on this will always increment by one
-  //in order to stop game need to clear interval the countdown timer is global variable so program can grab that to stop game
+  //in order to stop game need to clear interval the countdown timer is global variable so any part of program can grab that to stop game
 
   function stopGame() {
 
@@ -89,4 +89,115 @@ var questions = [
   function onSaveScore(e) {
     //e standing for event?
     var initials = document.getElementById("initials").value
+
+    //if we have valid initials, save the score to local storage -jsn comment
+    if (initials !== "") {
+        localStorage.setItem(initials, score);
+
+        document.getElementById("initials").value = "";
+    }
+  }
+
+  function onViewScores(e) {
+    window.location.href = '';
+    //link to scores.html
+  }
+
+  function onSelectAnswer(e) {
+    var correctAnswer = questions[currentQuestion].answer;
+    var userAnswer = e.target.textContent;
+    //e means event?
+
+    if (correctAnswer === userAnswer) {
+        score++;
+
+        displayMessage('Correct!')
+        //change to right answer
+
+    } else {
+        score--;
+        displayMessage('Wrong')
+        //change string inncorrect?
+    }
+
+    //call up next question - jsn comment
+    displayQuestion();
+  }
+
+  function displayMessage(msg) {
+    //change msg to message?
+
+    //display the message- jsn comment
+    message.textContent = msg;
+
+    //Clear the message after 1 second- jsn comment
+    setTimeout(function () {
+        message.textContent = " ";
+    }, 1000);
+    //add string to text content?
+  }
+
+  function displayQuestion() {
+    //increment to get next question -jsn comment
+    currentQuestion++;
+
+    console.log('current question is ' + currentQuestion);
+    //change string
+
+    //have we run out of questions?
+    if (currentQuestion >= questions.length) {
+        stopGame();
+        return;
+    }
+
+    //load question information from the question array - jsn comment
+    var question = questions[currentQuestion];
+    document.getElementById("question").textContent = question.title
+
+    var question = questions[currentQuestion];
+    document.getElementById("question").textContent = question.title
+
+    //clear any existing options - jsn comment
+    options.innerHTML = "";
+    //can use text content instead?
+
+    //load through the choices and output the new possible options - jsn comment
+    for (var i = 0; i < question.choices.length; i++) {
+
+        var option = document.createElement("div");
+        option.textContent = question.choices[i];
+        option.onclick = onSelectAnswer;
+        option.classList.add("option");
+
+        options.appendChild(option);
+    }
+  }
+
+  function onStartGame() {
+
+    //set timer at 75 seconds- jsn comment
+    secondsLeft = 75;
+
+    //start at the first questions - jsn comment
+    currentQuestion = 0;
+
+    //reset the score -jsn comment
+    score = 0;
+
+    //start timer - jsn comment
+    countdownTimer = setInterval(function (){
+        if (secondsLeft > 0) {
+            timer.textContent = secondsLeft;
+
+        } else {
+            //stop the counter and end game - jsn comment
+            stopGame();
+        }
+        secondsLeft--;
+    }, 1000);
+
+    //hide welcome section
+    welcome.style.display = "none";
+    result.style.display = "none";
+    quiz.style.display = 'flex';
   }

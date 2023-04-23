@@ -153,13 +153,12 @@ var questions = [
     //load question information from the question array - jsn comment
     var question = questions[currentQuestion];
     document.getElementById("question").textContent = question.title
-
-    var question = questions[currentQuestion];
-    document.getElementById("question").textContent = question.title
+    //text content adds in question
 
     //clear any existing options - jsn comment
     options.innerHTML = "";
     //can use text content instead?
+    //removes previous question answers
 
     //load through the choices and output the new possible options - jsn comment
     for (var i = 0; i < question.choices.length; i++) {
@@ -206,6 +205,7 @@ var questions = [
   }
 
 startQuiz.addEventListener("click", onStartGame);
+//jsn says start with this
 SaveScore.addEventListener("click", onSaveScore);
 ViewScores.addEventListener("click", onViewScores);
 playAgain.addEventListener("click", onStartGame)

@@ -164,9 +164,12 @@ var questions = [
     for (var i = 0; i < question.choices.length; i++) {
 
         var option = document.createElement("div");
+        //created div
         option.textContent = question.choices[i];
         option.onclick = onSelectAnswer;
+        //assigned event handler
         option.classList.add("option");
+        //added sub options to html
 
         options.appendChild(option);
     }

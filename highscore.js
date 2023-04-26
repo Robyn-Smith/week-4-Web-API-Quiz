@@ -1,3 +1,7 @@
+for (let i = 0; i < localStorage.length; i++)  {      
+   let key = localStorage.key(i);
+   console.log(localStorage.getItem(key));
+}
 
 // //add scores.js for local storage
 // var scoresheet = document.getElementById("scoresheet")

@@ -139,16 +139,20 @@ var questions = [
     var correctAnswer = questions[currentQuestion].answer;
     var userAnswer = e.target.textContent;
     //e means event?
+  
 
     if (correctAnswer === userAnswer) {
         score++;
+        document.getElementById('correct-sound').play();
 
         displayMessage('Correct!')
+
         //change to right answer
 
     } else {
         score--;
-        displayMessage('Wrong')
+        document.getElementById('incorrect-sound').play();
+        displayMessage('Incorrect')
         //change string inncorrect?
     }
 
@@ -226,8 +230,8 @@ tryAgain.addEventListener("click", onStartGame);
 
 // for (var i = 0; i < localStorage.length; i++) {
 
-//     var participant = localStorage.key(i);
-//     var score = localStorage.getItem(participant);
+//var participant = localStorage.key(i);
+//var score = localStorage.getItem(participant);
 
 //     var result = document.createElement("div");
 //     result.classList.add("result");

@@ -34,12 +34,14 @@ var questions = [
     },
   ];
 
+//buttons.....
   var startQuiz = document.getElementById("startQuiz")
   // jsn reccoments doing just this first
   var saveScore = document.getElementById("saveScore")
  // var viewScore = document.getElementById("viewScore") ..... not being used rn
   var tryAgain = document.getElementById("tryAgain")
 
+  //pages....
   var welcome = document.getElementById("welcome")
   //welcome screen 
   var quiz = document.getElementById("quiz")
@@ -68,6 +70,15 @@ var questions = [
   //score will increment dpending how many answered correct
   //current quesion so know which question you are on this will always increment by one
   //in order to stop game need to clear interval the countdown timer is global variable so any part of program can grab that to stop game
+  
+  
+  // function onWelcome (){
+  //   welcome.style.display = "flex";
+  //   result.style.display = "none";
+  //   quiz.style.display = 'none';
+  // }
+  
+
 
   function onStartGame() {
 
@@ -117,6 +128,11 @@ var questions = [
 
     //display the score- jsn comment
     summary.textContent = "Your Score is:" + score;
+
+    // welcome.style.display = "none";
+    // quiz.style.display = 'none';
+    // result.style.display = "flex";
+    
 
   }
 

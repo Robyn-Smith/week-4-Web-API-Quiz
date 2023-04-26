@@ -217,6 +217,12 @@ saveScore.addEventListener("click", onSaveScore);
 //viewScore.addEventListener("click", onViewScores); ------------------------
 tryAgain.addEventListener("click", onStartGame);
 
+var highscores = {
+  participant: participant.value,
+  score: score.value,
+};
+
+localStorage.setItem("participant", JSON.stringify(score));
 
 //add scores.js for local storage
 //var scoresheet = document.getElementById("scoresheet")

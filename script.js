@@ -69,6 +69,38 @@ var questions = [
   //current quesion so know which question you are on this will always increment by one
   //in order to stop game need to clear interval the countdown timer is global variable so any part of program can grab that to stop game
 
+  function onStartGame() {
+
+    //set timer at 75 seconds- jsn comment
+    secondsLeft = 75;
+
+    //start at the first questions - jsn comment
+    currentQuestion = 0;
+
+    //reset the score -jsn comment
+    score = 0;
+
+    //start timer - jsn comment
+    countdownTimer = setInterval(function (){
+        if (secondsLeft > 0) {
+            timer.textContent = secondsLeft;
+
+        } else {
+            //stop the counter and end game - jsn comment
+            stopGame();
+        }
+        secondsLeft--;
+    }, 1000);
+
+    //hide welcome section - jsn comment
+    welcome.style.display = "none";
+    result.style.display = "none";
+    quiz.style.display = 'flex';
+
+    //display the first question -jsn comment
+    displayQuestion();
+  }
+
   function stopGame() {
 
     // Stop countdown timer -jsn comment
@@ -173,38 +205,6 @@ var questions = [
 
         options.appendChild(option);
     }
-  }
-
-  function onStartGame() {
-
-    //set timer at 75 seconds- jsn comment
-    secondsLeft = 75;
-
-    //start at the first questions - jsn comment
-    currentQuestion = 0;
-
-    //reset the score -jsn comment
-    score = 0;
-
-    //start timer - jsn comment
-    countdownTimer = setInterval(function (){
-        if (secondsLeft > 0) {
-            timer.textContent = secondsLeft;
-
-        } else {
-            //stop the counter and end game - jsn comment
-            stopGame();
-        }
-        secondsLeft--;
-    }, 1000);
-
-    //hide welcome section - jsn comment
-    welcome.style.display = "none";
-    result.style.display = "none";
-    quiz.style.display = 'flex';
-
-    //display the first question -jsn comment
-    displayQuestion();
   }
 
 startQuiz.addEventListener("click", onStartGame);

@@ -120,13 +120,13 @@ var questions = [
 
   function onSaveScore(e) {
     //e standing for event?
-    var initials = document.getElementById("initials").value
+    var participant = document.getElementById("participant").value
 
-    //if we have valid initials, save the score to local storage -jsn comment
-    if (initials !== "") {
-        localStorage.setItem(initials, score);
+    //if we have valid participant, save the score to local storage -jsn comment
+    if (participant !== "") {
+        localStorage.setItem(participant, score);
 
-        document.getElementById("initials").value = "";
+        document.getElementById("participant").value = "";
     }
   }
 
@@ -226,13 +226,13 @@ playAgain.addEventListener("click", onStartGame);
 
 // for (var i = 0; i < localStorage.length; i++) {
 
-//     var initials = localStorage.key(i);
-//     var score = localStorage.getItem(initials);
+//     var participant = localStorage.key(i);
+//     var score = localStorage.getItem(participant);
 
 //     var result = document.createElement("div");
 //     result.classList.add("result");
 
-//     //result.innerHTML = '<div class="score-item">${initials}</div>'
+//     //result.innerHTML = '<div class="score-item">${participant}</div>'
 //            // '<div class="score-item">${score}</div>'
     
     

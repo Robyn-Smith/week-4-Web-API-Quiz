@@ -75,7 +75,7 @@ var questions = [
     secondsLeft = 75;
 
     //start at the first questions - jsn comment
-    currentQuestion = 0;
+    currentQuestion = -1;
 
     //reset the score -jsn comment
     score = 0;
@@ -209,6 +209,7 @@ var questions = [
 
         options.appendChild(option);
     }
+    
   }
 
 startQuiz.addEventListener("click", onStartGame);

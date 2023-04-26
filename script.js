@@ -224,6 +224,31 @@ var highscores = {
 
 localStorage.setItem("participant", JSON.stringify(score));
 
+
+// for (var i = 0; i < localStorage.length; i++) {
+
+// var participant = localStorage.key(i);
+// var score = localStorage.getItem(participant);
+
+//     var result = document.createElement("div");
+//     result.classList.add("result");
+
+//     result.innerHTML = '<div class="score-item">${participant}</div>'
+//           '<div class="score-item">${score}</div>'
+    
+    
+
+//     scoresheet.appendChild(result);
+// }
+
+// function displayScores() {
+//   var  = JSON.parse(localStorage.getItem("studentGrade"));
+//   if (lastGrade !== null) {
+//     document.querySelector(".message").textContent = lastGrade.student + 
+//     " received a/an " + lastGrade.grade
+//   }
+// }
+
 //add scores.js for local storage
 //var scoresheet = document.getElementById("scoresheet")
 //var backtoQuiz = document.getElementById("backtoquiz") ----- used links instead of buttons

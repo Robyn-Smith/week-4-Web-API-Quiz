@@ -1,7 +1,23 @@
-for (let i = 0; i < localStorage.length; i++)  {      
-   let key = localStorage.key(i);
-   console.log(localStorage.getItem(key));
-}
+var highscores = document.getElementById("highscores")
+for (var i = 0; i < localStorage.length; i++) {
+
+    var participant = localStorage.key(i);
+    var score = localStorage.getItem(participant);
+    
+        var result = document.createElement("div");
+        result.classList.add("result");
+    
+        result.innerHTML = `<div class="score-item">${participant}</div>
+               <div class="score-item">${score}</div>`
+        
+        highscores.appendChild(result);
+    }
+
+
+// for (let i = 0; i < localStorage.length; i++)  {      
+//    let key = localStorage.key(i);
+//    console.log(localStorage.getItem(key));
+// }
 
 // //add scores.js for local storage
 // var scoresheet = document.getElementById("scoresheet")

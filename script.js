@@ -218,8 +218,8 @@ saveScore.addEventListener("click", onSaveScore);
 tryAgain.addEventListener("click", onStartGame);
 
 var highscores = {
-  participant: participant.value,
-  score: score.value,
+  participant: participant,
+  score: score,
 };
 
 localStorage.setItem("participant", JSON.stringify(score));

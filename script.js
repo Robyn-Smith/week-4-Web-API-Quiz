@@ -75,6 +75,8 @@ var questions = [
     secondsLeft = 75;
 
     //start at the first questions - jsn comment
+    //changed to minus one so that the array starts from question zero, 
+    //this solved the missing first question problem
     currentQuestion = -1;
 
     //reset the score -jsn comment

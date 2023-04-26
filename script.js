@@ -38,7 +38,7 @@ var questions = [
   // jsn reccoments doing just this first
   var saveScore = document.getElementById("saveScore")
  // var viewScore = document.getElementById("viewScore") ..... not being used rn
-  var playAgain = document.getElementById("playAgain")
+  var tryAgain = document.getElementById("tryAgain")
 
   var welcome = document.getElementById("welcome")
   //welcome screen 
@@ -211,7 +211,7 @@ startQuiz.addEventListener("click", onStartGame);
 //jsn says start with this
 saveScore.addEventListener("click", onSaveScore);
 //viewScore.addEventListener("click", onViewScores); ------------------------
-playAgain.addEventListener("click", onStartGame);
+tryAgain.addEventListener("click", onStartGame);
 
 
 //add scores.js for local storage

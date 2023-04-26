@@ -37,7 +37,7 @@ var questions = [
   var startQuiz = document.getElementById("startQuiz")
   // jsn reccoments doing just this first
   var saveScore = document.getElementById("saveScore")
-  var viewScore = document.getElementById("viewScore")
+ // var viewScore = document.getElementById("viewScore") ..... not being used rn
   var playAgain = document.getElementById("playAgain")
 
   var welcome = document.getElementById("welcome")
@@ -98,10 +98,10 @@ var questions = [
     }
   }
 
-  function onViewScores(e) {
-    window.location.href = '';
-    //link to scores.html.........................................................
-  }
+ // function onViewScores(e) {
+    //window.location.href = '';
+    //link to scores.html............................................................. not being used rn
+ // }
 
   function onSelectAnswer(e) {
     var correctAnswer = questions[currentQuestion].answer;
@@ -209,9 +209,9 @@ var questions = [
 
 startQuiz.addEventListener("click", onStartGame);
 //jsn says start with this
-SaveScore.addEventListener("click", onSaveScore);
-ViewScores.addEventListener("click", onViewScores);
-playAgain.addEventListener("click", onStartGame)
+saveScore.addEventListener("click", onSaveScore);
+//viewScore.addEventListener("click", onViewScores); ------------------------
+playAgain.addEventListener("click", onStartGame);
 
 
 //add scores.js for local storage
@@ -219,7 +219,7 @@ var scoresheet = document.getElementById("scoresheet")
 var backtoQuiz = document.getElementById("backtoquiz")
 
 function onBackToQuiz() {
-    window.location.href = "index.html"; //.............................................
+    window.location.href = "index.html";
 }
 
 for (var i = 0; i < localStorage.length; i++) {
@@ -230,8 +230,10 @@ for (var i = 0; i < localStorage.length; i++) {
     var result = document.createElement("div");
     result.classList.add("result");
 
-    result.innerHTML = '<div class="score-item">${initials}</div>'
-            '<div class="score-item">${score}</div>'
+    //result.innerHTML = '<div class="score-item">${initials}</div>'
+           // '<div class="score-item">${score}</div>'
+    
+    
 
     scoresheet.appendChild(result);
 }

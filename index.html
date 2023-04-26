@@ -10,13 +10,17 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <div id= 'highscores'>
-            <a href="">highscores</a>
-        </div>
-        <div id = 'timer'> </div>
-        <!--countdown timer can add justify content and space inbetween to flip maybe change this to countdown-->
+    <header>  
+        <div id = 'timer'> </div>  
     </header>
+
+
+     <nav id= 'highscores'>
+            <a href="highscores.html">highscores</a>
+    </nav> <!--............................... high scores link-->
+        
+        <!--countdown timer can add justify content and space inbetween to flip maybe change this to countdown-->
+
     <main>
         <div id="welcome">
             <h1>Welcome to Code Quiz</h1>
@@ -36,13 +40,15 @@
             <!--correct or wrong message tell the user what they scored-->
         </div>
 
-        <div id="result" class="hidden">
+        <div id="result" class="hidden"> <!--issuessssssss..........-->
             <div id="summary"></div>
-            <button id="viewscores" class="button"> View highscores</button>
+            <!--<button id="viewscore" class="button"> View highscores</button>--> <!--not being used-->
             <!--changed btn to button-->
             <input type="text" id="initials" placeholder="Enter your initials" />
+            
             <button id = "saveScore" class="button">Save Score</button>
             <!--changed btn to button-->
+           
             <button id="playAgain" class="button">Play Again</button>
         </div>
         <!--this starts off hidden but is visable at the end when the quiz is over-->
@@ -51,5 +57,6 @@
     <!--could add separate question js file and link here above script.js-->
 <!-- added link to JavaScript at the bottom of the page so that it renders last and therefore is less likely to error -->
     <script src="script.js"></script>
+
 </body>
 </html>

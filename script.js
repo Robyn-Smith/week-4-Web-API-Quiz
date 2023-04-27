@@ -41,6 +41,8 @@ var questions = [
  // var viewScore = document.getElementById("viewScore") ..... not being used rn
   var tryAgain = document.getElementById("tryAgain")
 
+
+  
   //pages....
   var home = document.getElementById("home")
   //home screen 

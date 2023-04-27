@@ -19,8 +19,16 @@ display: block;
 } */
 
 
-
-
+button {
+    background-color: rgba(163, 63, 135, 0.845);
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px 2px rgba(59, 231, 28, 0.489) ;
+    color: #ffffff;
+}
+button:hover {
+    background-color: greenyellow;
+    color: black;
+  }
 
 :root {
     --white: #ffffff;
@@ -102,7 +110,7 @@ display: block;
   header {
     padding: 20px;
     text-align: center;
-    background: var(--dark-blue);
+    background: purple;
     color: var(--white);
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
@@ -112,11 +120,11 @@ display: block;
   
   nav {
     display: flex;
-    background-color: var(--turquoise);
+    background-color: palevioletred;
   }
   /*This refers to the style of the navigation bar in html*/
   nav a {
-    color: var(--dark-blue);
+    color: black;
     padding: 14px 20px;
     text-decoration: none;
     text-align: center;
@@ -124,7 +132,7 @@ display: block;
   /*This refers to the style of navigation links.*/
   nav a:hover {
     background-color: var(--white);
-    color: var(--dark-blue);
+    color: black;
   }
   /*nav a:hover allows the colour of the navigation links n background surrounding to change when the user hovers 
   over them*/

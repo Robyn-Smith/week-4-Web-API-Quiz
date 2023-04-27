@@ -133,16 +133,16 @@ li {
   }
 
   @keyframes spin{
-    10% {background-color: red;}
-    20% {background-color: orange;}
-    30% {background-color: yellow;}
-    40% {background-color: lightgreen;}
-    50% {background-color: green}
-    60% {background-color: lightblue;}
-    70% {background-color: blue;}
-    80% {background-color: violet;}
-    90% {background-color: purple;}
-    100% {background-color: pink;}
-    30% {background-color: palevioletred;}
-    40% {background-color: white;}
+    10% {background-color: rgba(255, 0, 0, 0.573);}
+    20% {background-color: rgba(255, 166, 0, 0.537);}
+    30% {background-color: rgba(255, 255, 0, 0.537);}
+    40% {background-color: rgba(144, 238, 144, 0.537);}
+    50% {background-color: rgba(0, 128, 0, 0.537)}
+    60% {background-color: rgba(173, 216, 230, 0.537);}
+    70% {background-color: rgba(0, 0, 255, 0.537);}
+    80% {background-color: rgba(238, 130, 238, 0.537);}
+    90% {background-color: rgba(128, 0, 128, 0.537);}
+    100% {background-color: rgba(255, 192, 203, 0.537);}
+    30% {background-color: rgba(216, 112, 147, 0.537);}
+    40% {background-color: rgba(255, 255, 255, 0.537);}
 }

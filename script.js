@@ -248,11 +248,11 @@ localStorage.setItem("participant", JSON.stringify(score));
 //styling
 //your score is box
 summary.setAttribute("style", "font-size: 25px; font-weight: bold; border-radius: 5px;");
-document.getElementById("summary").style.backgroundColor = "lightblue";
+document.getElementById("summary").style.backgroundColor = "rgba(255, 255, 255, 0.537)";
 
 //quiz box
 quiz.setAttribute("style", "font-size: 25px; font-weight: bold; border-radius: 5px;");
-document.getElementById("quiz").style.backgroundColor = "white";
+document.getElementById("quiz").style.backgroundColor = "rgba(255, 255, 255, 0.537)";
 
 
 // document.getElementById("question").style.padding = "50px 10px 20px 30px";

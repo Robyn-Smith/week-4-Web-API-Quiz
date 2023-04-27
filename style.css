@@ -1,12 +1,22 @@
-#quiz {
+/* #quiz {
 background-color: #ffffff;
 border-radius: 10px;
 height: 80%;
 width: 80%;
 display: flex;
-}
+justify-content: space-between;
+display: block;
+} */
 /* quiz */
 
+/* #options {
+    background-color: palevioletred;
+    border-radius: 5px;
+}
+
+#message {
+    background-color: aqua;
+} */
 
 
 

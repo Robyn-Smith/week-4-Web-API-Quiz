@@ -42,7 +42,7 @@ var questions = [
   var tryAgain = document.getElementById("tryAgain")
 
 
-  
+
   //pages....
   var home = document.getElementById("home")
   //home screen 
@@ -244,6 +244,15 @@ var highscores = {
 };
 
 localStorage.setItem("participant", JSON.stringify(score));
+
+//styling
+//your score is box
+summary.setAttribute("style", "font-size: 25px; font-weight: bold; border-radius: 5px;");
+document.getElementById("summary").style.backgroundColor = "lightblue";
+
+//quiz box
+quiz.setAttribute("style", "font-size: 25px; font-weight: bold; border-radius: 5px;");
+document.getElementById("quiz").style.backgroundColor = "white";
 
 
 // for (var i = 0; i < localStorage.length; i++) {

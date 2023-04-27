@@ -1,4 +1,5 @@
 :root {
+    --black: #000000;
     --white: #ffffff;
     --dark-blue: #10464de8;
     --turquoise: #8ac9b4ef;
@@ -15,7 +16,7 @@
     flex-direction: column;
     min-height: 100vh;
     justify-content: flex-start;
-    background-color: var(--turquoise);
+    background-color: var(--black);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -115,7 +116,7 @@
   /*This refers to the style of the navigation bar in html*/
   nav a {
     border-radius:30%;
-    color: var(--dark-blue);
+    color: black;
     padding: 14px 20px;
     text-decoration: none;
     text-align: center;
@@ -125,7 +126,7 @@
   /*This refers to the style of navigation links.*/
   nav a:hover {
     background-color: var(--white);
-    color: var(--dark-blue);
+    color: black;
   }
   /*nav a:hover allows the colour of the navigation links n background surrounding to change when the user hovers 
   over them*/
@@ -153,7 +154,8 @@
   to each other and allowed them to be responsive to screen size changes.*/
 
 li {
-    
+    font-size: large;
+    font-weight: bolder;
     text-decoration: none;
     list-style-type: none;
     text-align: center;

@@ -255,6 +255,9 @@ quiz.setAttribute("style", "font-size: 25px; font-weight: bold; border-radius: 5
 document.getElementById("quiz").style.backgroundColor = "white";
 
 
+// document.getElementById("question").style.padding = "50px 10px 20px 30px";
+// document.getElementById("question").style.display = "none";
+
 // for (var i = 0; i < localStorage.length; i++) {
 
 // var participant = localStorage.key(i);

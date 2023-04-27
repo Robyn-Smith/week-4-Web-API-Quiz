@@ -8,7 +8,7 @@
   /*variables have been declared in the root to make it easier to change the 3 main colours of the webpage.
   The border radius has also been declared as a variable to make it easier to repeat the same style throughout 
   the page.*/
-  
+
   body {
     font-size: 16px;
     font-family: 'Courier New', Courier, monospace;

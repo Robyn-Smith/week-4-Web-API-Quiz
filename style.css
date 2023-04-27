@@ -1,3 +1,17 @@
+#quiz {
+background-color: #ffffff;
+border-radius: 10px;
+height: 80%;
+width: 80%;
+display: flex;
+}
+/* quiz */
+
+
+
+
+
+
 :root {
     --white: #ffffff;
     --dark-blue: #10464de8;

@@ -33,6 +33,7 @@
     margin-top: 50px;
     margin-left: 50%;
     margin-bottom: 0px;
+    padding: 0%;
     
     top: 50%;
     left: 50%;
@@ -85,22 +86,22 @@
   so that it stands out being underlined. Font family is included to ensure that a similar font will be visable 
   if the font chosen is not available for different browers*/
   
-  h3 {
+  /* h3 {
     font-size: 3rem;
     margin: 10px;
     font-weight: bolder;
     text-decoration:underline;
     font-family: 'Courier New', Courier, monospace;
-  }
+  } */
   /*h3 refers to the 'My Work' heading nested in the article element in html.*/
   
-  h4 {
+  /* h4 {
     font-size: 2rem;
     text-decoration: underline;
     font-style: var(--white);
     margin: 10px;
     font-family: 'Courier New', Courier, monospace;
-  }
+  } */
   /*h4 refers to the heading in footer element*/
   
 
@@ -109,6 +110,7 @@
     border-radius:30%;
     display: flex;
     background-color: grey;
+    margin-top: 0px;
   }
   /*This refers to the style of the navigation bar in html*/
   nav a {
@@ -117,6 +119,8 @@
     padding: 14px 20px;
     text-decoration: none;
     text-align: center;
+    margin-left: 45%;
+    margin-right: 45%;
   }
   /*This refers to the style of navigation links.*/
   nav a:hover {
@@ -134,7 +138,11 @@
 /* 
     padding-top: 50px;
     padding bottom: 100px; */
-
+    /* border-bottom-width: 100%;
+    border-top-width: 50%; */
+    /* transform: ; */
+    margin-left: 20%;
+    margin-right: 20%;
     animation-name: spin;
     animation-duration: 5s;
     animation-direction: alternate;

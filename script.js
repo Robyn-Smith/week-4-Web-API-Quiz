@@ -42,8 +42,8 @@ var questions = [
   var tryAgain = document.getElementById("tryAgain")
 
   //pages....
-  var welcome = document.getElementById("welcome")
-  //welcome screen 
+  var home = document.getElementById("home")
+  //home screen 
   var quiz = document.getElementById("quiz")
   //quiz screen
   var result = document.getElementById("result")
@@ -72,8 +72,8 @@ var questions = [
   //in order to stop game need to clear interval the countdown timer is global variable so any part of program can grab that to stop game
   
   
-  // function onWelcome (){
-  //   welcome.style.display = "flex";
+  // function onhome (){
+  //   home.style.display = "flex";
   //   result.style.display = "none";
   //   quiz.style.display = 'none';
   // }
@@ -105,8 +105,8 @@ var questions = [
         secondsLeft--;
     }, 1000);
 
-    //hide welcome section - jsn comment
-    welcome.style.display = "none";
+    //hide home section - jsn comment
+    home.style.display = "none";
     result.style.display = "none";
     quiz.style.display = 'flex';
 
@@ -129,7 +129,7 @@ var questions = [
     //display the score- jsn comment
     summary.textContent = "Your Score is:" + score;
 
-    // welcome.style.display = "none";
+    // home.style.display = "none";
     // quiz.style.display = 'none';
     // result.style.display = "flex";
     

@@ -163,14 +163,14 @@ var questions = [
         score++;
         document.getElementById('correct-sound').play();
 
-        displayMessage('Correct!')
+        displayMessage('Correct!✅')
 
         //change to right answer
 
     } else {
         score--;
         document.getElementById('incorrect-sound').play();
-        displayMessage('Incorrect')
+        displayMessage('Incorrect❎')
         //change string inncorrect?
     }
 

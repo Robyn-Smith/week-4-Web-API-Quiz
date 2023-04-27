@@ -17,7 +17,33 @@ display: block;
 #message {
     background-color: aqua;
 } */
+li {
+  font-size: large;
+  font-weight: bolder;
+  text-decoration: none;
+  list-style-type: none;
+  text-align: center;
+  padding: 6px;
+  margin-top:5%;
+  /* justify-content: space-between; */
+}
 
+#quiz {
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.537);
+  justify-content: center;
+  width: 100%;
+  margin: 1px;
+  margin-bottom: 4px;
+  line-height: 2em;
+  padding: 1px;
+  color: rgb(82, 3, 70);
+  /* text-align: center; */
+}
+
+.hidden {
+  display: none;
+}
 
 button {
     background-color: rgba(163, 63, 135, 0.845);
@@ -29,6 +55,8 @@ button:hover {
     background-color: greenyellow;
     color: black;
   }
+
+
 
 :root {
     --white: #ffffff;
@@ -110,10 +138,11 @@ button:hover {
   header {
     padding: 20px;
     text-align: center;
-    background: purple;
+    background: rgba(128, 0, 128, 0.326);
     color: var(--white);
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
+    /* display: none; */
   }
   /*header refers to not only the style of the header element at the top of the page but also the headers 
   above each project.*/

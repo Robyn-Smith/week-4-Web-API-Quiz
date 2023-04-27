@@ -219,7 +219,7 @@ var questions = [
     //load through the choices and output the new possible options - jsn comment
     for (var i = 0; i < question.choices.length; i++) {
 
-        var option = document.createElement("div");
+        var option = document.createElement("li");
         //created div
         option.textContent = question.choices[i];
         option.onclick = onSelectAnswer;
@@ -253,6 +253,9 @@ document.getElementById("summary").style.backgroundColor = "rgba(255, 255, 255, 
 //quiz box
 quiz.setAttribute("style", "font-size: 25px; font-weight: bold; border-radius: 5px;");
 document.getElementById("quiz").style.backgroundColor = "rgba(255, 255, 255, 0.537)";
+// document.getElementById("options").style.padding = "50px 10px 20px 30px";
+// document.getElementById("options").style.backgroundColor = "rgba(255, 255, 255, 00)";
+// document.getElementById("options").style.display = "block";
 
 
 // document.getElementById("question").style.padding = "50px 10px 20px 30px";

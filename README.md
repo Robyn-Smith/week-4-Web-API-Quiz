@@ -22,3 +22,8 @@ THEN the game is over
 WHEN the game is over
 THEN I can save my initials and my score
 ```
+## Description
+
+
+![A screenshot of the coding quiz, consiting of a timer within the purple header, a question and options for the user to choose from, a link to the highscores page with a pink background and a space themed background.](/assets/screenshot-quiz.png)
+

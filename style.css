@@ -133,12 +133,12 @@ main {
   background-color: var(--green);
   }
   
-#result {
+#endPage {
   justify-content: space-evenly;
   width: 100%;
   padding: 60px;
   }
 
-#summary {
+#end {
   height: 1%;
   }

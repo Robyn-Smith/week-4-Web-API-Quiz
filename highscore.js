@@ -4,12 +4,12 @@ for (var i = 0; i < localStorage.length; i++) {
     var participant = localStorage.key(i);
     var score = localStorage.getItem(participant);
     
-        var result = document.createElement("div");
-        result.classList.add("result");
+        var list = document.createElement("div");
+        list.classList.add("list");
     
-        result.innerHTML = `<li id="score-item" class = "participant">${participant}</li><li id="score-item" class = "score">${score}</li>`
+        list.innerHTML = `<li id="score-item" class = "participant">${participant}</li><li id="score-item" class = "score">${score}</li>`
                
         
-        highscores.appendChild(result);
+        highscores.appendChild(list);
     }
 

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coding Quiz</title>
+    <title>⭐Coding Quiz⭐</title>
     <link rel="stylesheet" href="reset.css" />
     <!--reset is added first so that changes to style.css will overwrite this file as it is just a default-->
     <link rel="stylesheet" href="style.css" />
@@ -19,10 +19,6 @@
     <header>  
         <div id = 'timer'> </div>  
     </header>
-
-
-
-        
         <!--countdown timer can add justify content and space inbetween to flip maybe change this to countdown-->
 
     <main>
@@ -44,10 +40,9 @@
             <!--correct or wrong message tell the user what they scored-->
         </section>
 
-        <div id="result" class="hidden"> <!--not hiding on welcome page???????????????????????????????????-->
-            <div id="summary"></div>
-            <!--<button id="viewscore" class="button"> View highscores</button>--> <!--not being used-->
-            <!--changed btn to button-->
+        <div id="endPage" class="hidden"> 
+            <div id="end"></div>
+
             <input type="text" id="participant" placeholder="Enter your initials here" />
             
             <button id = "saveScore" class="button">Save Score</button>
@@ -60,9 +55,8 @@
 
      <nav id= 'highscores'>
             <a href="highscores.html">✨Highscores✨</a>
-    </nav> <!--............................... high scores link-->
+    </nav> 
 
-    <!--could add separate question js file and link here above script.js-->
 <!-- added link to JavaScript at the bottom of the page so that it renders last and therefore is less likely to error -->
     <script src="script.js"></script>
 

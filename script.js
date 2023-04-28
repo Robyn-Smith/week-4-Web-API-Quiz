@@ -1,4 +1,5 @@
-// list of all questions, choices, and answers
+// all questions, answers and choices have been placed into arrays at the top of the javascript code so that it can 
+//be accessed and refered to within code.
 var questions = [
     {
       title: 'Commonly used data types DO NOT include:',
@@ -34,93 +35,69 @@ var questions = [
     },
   ];
 
-//buttons.....
-  var beginQuiz = document.getElementById("beginQuiz")
-  // jsn reccoments doing just this first
-  var saveScore = document.getElementById("saveScore")
- 
-  var tryAgain = document.getElementById("tryAgain")
+var home = document.getElementById("home")                      //starting page
+var beginQuiz = document.getElementById("beginQuiz")            //starting button
 
+var quiz = document.getElementById("quiz")                      //quiz page
+var timer = document.getElementById("timer")                    //timer
+var choices = document.getElementById("choices")                // all available choices wrong and write answers
+var message = document.getElementById("message")                //message telling user if they have answered correctly or incorrectly
 
+var endPage = document.getElementById("endPage")                 //final page
+var saveScore = document.getElementById("saveScore")             //save score button
+var tryAgain = document.getElementById("tryAgain")               //redo quiz button
+var end = document.getElementById("end")                         //where the total score is displayed
 
-  //pages....
-  var home = document.getElementById("home")
-  //home screen 
-  var quiz = document.getElementById("quiz")
-  //quiz screen
-  var result = document.getElementById("result")
-  //result screen
-  //all 3 of these going to be hiding and showing so need to work on straight away
+var seconds = 0;                                                  //variable relating to timer, data type set to number
+var score = 0;                                                    //variable refering to the player's score, data type set to number
+var currentQuestion = 0;                                          //variable refering to current question, data type set to number
+var countdown;                                                    //variable relating to timer decrement used in function
+  
+//These are all global variables that can be accessed and referred to by the whole script.
+//timer/seconds will decrement
+//score will increment dpending how many answered correct
+//current quesion so know which question you are on this will always increment by one
+//in order to end game need to clear interval the countdown timer is global variable so any part of program can grab that to end game
 
-  var choices = document.getElementById("choices")
-  //answers and wrong choices
-  var message = document.getElementById("message")
-  //youve answered right or wrong
+    
+  function onPlayGame() {
+    seconds = 75;                              //timer is set at 75 seconds.
+    currentQuestion = -1;                      //This funtion must start at the first question. This is why current question
+    score = 0;                                 //has been set to -1 as the first question was missing when this was set to zero.
 
-  var timer = document.getElementById("timer")
-  //might be changing to countdown
+    countdown = setInterval(function (){       //this starts the timer
+        if (seconds > 0) {
+            timer.textContent = seconds;
 
-  var summary = document.getElementById("summary")
-  //where the results/scores are
-
-  var secondsLeft = 0;
-  var score = 0;
-  var currentQuestion = 0;
-  var countdownTimer;
-  //global variables can be accessed by whole script.
-  //timer/seconds left will decriment
-  //score will increment dpending how many answered correct
-  //current quesion so know which question you are on this will always increment by one
-  //in order to stop game need to clear interval the countdown timer is global variable so any part of program can grab that to stop game
-
-  function onStartGame() {
-
-    //set timer at 75 seconds- jsn comment
-    secondsLeft = 75;
-
-    //start at the first questions - jsn comment
-    //changed to minus one so that the array starts from question zero, 
-    //this solved the missing first question problem
-    currentQuestion = -1;
-
-    //reset the score -jsn comment
-    score = 0;
-
-    //start timer - jsn comment
-    countdownTimer = setInterval(function (){
-        if (secondsLeft > 0) {
-            timer.textContent = secondsLeft;
-
-        } else {
-            //stop the counter and end game - jsn comment
-            stopGame();
+        } else {                                //this ends the counter the quiz
+            endGame();
         }
-        secondsLeft--;
+        seconds--;                              //this decrements the timer
     }, 1000);
 
     //hide home section - jsn comment
     home.style.display = "none";
-    result.style.display = "none";
+    endPage.style.display = "none";
     quiz.style.display = 'flex';
 
-    //display the first question -jsn comment
-    displayQuestion();
+    //show the first question -jsn comment
+    showQuestion();
   }
 
-  function stopGame() {
+  function endGame() {
 
-    // Stop countdown timer -jsn comment
-    clearInterval(countdownTimer);
+    // end countdown timer -jsn comment
+    clearInterval(countdown);
 
     //clear the timer - jsn comment
     timer.textContent = ""
 
-    //Hide the questions and show result- jsn comment
+    //Hide the questions and show endPage- jsn comment
     quiz.style.display = "none";
-    result.style.display = "flex"
+    endPage.style.display = "flex"
 
-    //display the score- jsn comment
-    summary.textContent = "Your Score is:" + score;
+    //show the score- jsn comment
+    end.textContent = "Your Score is:" + score;
 
   }
 
@@ -136,7 +113,7 @@ var questions = [
     }
   }
 
-  function onSelectAnswer(event) {
+  function onChosenAnswer(event) {
     var correctAnswer = questions[currentQuestion].answer;
     var userAnswer = event.target.textContent;
     //e means event?
@@ -145,25 +122,24 @@ var questions = [
     if (correctAnswer === userAnswer) {
         score++;
         document.getElementById('correct-sound').play();
-
-        displayMessage('Correct!✅')
+        showMessage('Correct!✅')
 
 
     } else {
-        secondsLeft -= 5;
+        seconds -= 5;
         document.getElementById('incorrect-sound').play();
-        displayMessage('Incorrect❎'); 
+        showMessage('Incorrect❎'); 
     }
-//criteria askstime to go faster if incorrect
+//criteria asks time to go faster if incorrect
 
     //call up next question - jsn comment
-    displayQuestion();
+    showQuestion();
   }
 
-  function displayMessage(msg) {
+  function showMessage(msg) {
     //change msg to message?
 
-    //display the message- jsn comment
+    //show the message- jsn comment
     message.textContent = msg;
 
     //Clear the message after 1 second- jsn comment
@@ -173,7 +149,7 @@ var questions = [
     //add string to text content?
   }
 
-  function displayQuestion() {
+  function showQuestion() {
     //increment to get next question -jsn comment
     currentQuestion++;
 
@@ -182,7 +158,7 @@ var questions = [
 
     //have we run out of questions?
     if (currentQuestion >= questions.length) {
-        stopGame();
+        endGame();
         return;
     }
 
@@ -202,7 +178,7 @@ var questions = [
         var option = document.createElement("li");
         //created div
         option.textContent = question.choices[i];
-        option.onclick = onSelectAnswer;
+        option.onclick = onChosenAnswer;
         //assigned event handler
         option.classList.add("option");
         //added sub choices to html
@@ -212,11 +188,11 @@ var questions = [
     
   }
 
-beginQuiz.addEventListener("click", onStartGame);
+beginQuiz.addEventListener("click", onPlayGame);
 //jsn says start with this
 saveScore.addEventListener("click", onSaveScore);
 
-tryAgain.addEventListener("click", onStartGame);
+tryAgain.addEventListener("click", onPlayGame);
 
 var highscores = {
   participant: participant,
@@ -227,8 +203,8 @@ localStorage.setItem("participant", JSON.stringify(score));
 
 //styling
 //your score is box
-summary.setAttribute("style", "font-size: 25px; font-weight: bold; border-radius: 5px;");
-document.getElementById("summary").style.backgroundColor = "rgba(255, 255, 255, 0.537)";
+end.setAttribute("style", "font-size: 25px; font-weight: bold; border-radius: 5px;");
+document.getElementById("end").style.backgroundColor = "rgba(255, 255, 255, 0.537)";
 
 //quiz box
 quiz.setAttribute("style", "font-size: 25px; font-weight: bold; border-radius: 5px;");

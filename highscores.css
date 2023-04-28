@@ -116,13 +116,25 @@
   to each other and allowed them to be responsive to screen size changes.*/
 
 li {
-    font-size: large;
-    font-weight: bolder;
+    /* font-size: large;
+    font-weight: bolder; */
     text-decoration: none;
     list-style-type: none;
     text-align: center;
-    padding: 50px;
+    /* padding: 50px; */
     
+}
+
+.participant {
+  font-size: 70px;
+  text-decoration: underline;
+  font-weight: bolder;
+
+}
+
+.score {
+  font-size: 60px;
+  padding-bottom: 50px;
 }
 
   @media screen and (max-width: 768px) {

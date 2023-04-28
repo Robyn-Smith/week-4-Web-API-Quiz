@@ -104,6 +104,7 @@ nav {
   background-color: rgba(216, 112, 147, 0.498);
   justify-content: center;
   margin-top: 20px;
+  font-size: 2em;
   }
   /*This refers to the style of the navigation bar in html*/
 nav a {

@@ -38,7 +38,7 @@ var questions = [
   var beginQuiz = document.getElementById("beginQuiz")
   // jsn reccoments doing just this first
   var saveScore = document.getElementById("saveScore")
- // var viewScore = document.getElementById("viewScore") ..... not being used rn
+ 
   var tryAgain = document.getElementById("tryAgain")
 
 
@@ -72,15 +72,6 @@ var questions = [
   //score will increment dpending how many answered correct
   //current quesion so know which question you are on this will always increment by one
   //in order to stop game need to clear interval the countdown timer is global variable so any part of program can grab that to stop game
-  
-  
-  // function onhome (){
-  //   home.style.display = "flex";
-  //   result.style.display = "none";
-  //   quiz.style.display = 'none';
-  // }
-  
-
 
   function onStartGame() {
 
@@ -131,15 +122,10 @@ var questions = [
     //display the score- jsn comment
     summary.textContent = "Your Score is:" + score;
 
-    // home.style.display = "none";
-    // quiz.style.display = 'none';
-    // result.style.display = "flex";
-    
-
   }
 
   function onSaveScore(event) {
-    //e standing for event?
+  
     var participant = document.getElementById("participant").value
 
     //if we have valid participant, save the score to local storage -jsn comment
@@ -149,11 +135,6 @@ var questions = [
         document.getElementById("participant").value = "";
     }
   }
-
- // function onViewScores(e) {
-    //window.location.href = '';
-    //link to scores.html............................................................. not being used rn
- // }
 
   function onSelectAnswer(event) {
     var correctAnswer = questions[currentQuestion].answer;
@@ -234,7 +215,7 @@ var questions = [
 beginQuiz.addEventListener("click", onStartGame);
 //jsn says start with this
 saveScore.addEventListener("click", onSaveScore);
-//viewScore.addEventListener("click", onViewScores); ------------------------
+
 tryAgain.addEventListener("click", onStartGame);
 
 var highscores = {

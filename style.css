@@ -17,6 +17,12 @@ display: block;
 #message {
     background-color: aqua;
 } */
+
+#timer{
+font-size: 4rem;
+font-weight: bold;
+}
+
 li {
   font-size: large;
   font-weight: bolder;

@@ -145,10 +145,15 @@ button:hover {
   
   nav {
     display: flex;
-    background-color: palevioletred;
-    border-radius: 50%;
-    width: 100%;
-    text-align: center;
+    background-color: rgba(216, 112, 147, 0.498);
+    /* border-radius: 50%; */
+    /* width: 100%; */
+    /* text-align: center; */
+    justify-content: center;
+    margin-top: 20px;
+    /* width: 70px; */
+    /* margin-left: 50%;
+    margin-right: 50%; */
   }
   /*This refers to the style of the navigation bar in html*/
   nav a {
@@ -196,6 +201,9 @@ button:hover {
     height: 1%;
   }
   
+ /* .stars {
+  font-size: 5em;
+ } */
   /* @media screen and (max-width: 768px) {
     main,
     nav,

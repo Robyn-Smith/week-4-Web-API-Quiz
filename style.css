@@ -1,23 +1,12 @@
-/* #quiz {
-background-color: #ffffff;
-border-radius: 10px;
-height: 80%;
-width: 80%;
-display: flex;
-justify-content: space-between;
-display: block;
-} */
-/* quiz */
-
-/* #options {
-    background-color: palevioletred;
-    border-radius: 5px;
-}
-
-#message {
-    background-color: aqua;
-} */
-
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --green: #b6f754;
+  }
+  /*variables have been declared in the root to make it easier to change the 3 main colours of the webpage.
+  The border radius has also been declared as a variable to make it easier to repeat the same style throughout 
+  the page.*/
+  
 #timer{
 font-size: 4rem;
 font-weight: bold;
@@ -54,8 +43,8 @@ li {
 button {
     background-color: rgba(163, 63, 135, 0.845);
     border-radius: 5px;
-    box-shadow: 5px 5px 10px 2px rgba(59, 231, 28, 0.489) ;
-    color: #ffffff;
+    box-shadow: 5px 5px 10px 2px var(--green) ;
+    color: var(--white);
     padding-top: 4%;
     padding-bottom: 4%;
     padding-left: 5%;
@@ -63,48 +52,23 @@ button {
     font-size: 20px;
 }
 button:hover {
-    background-color: rgb(182, 247, 84);
-    color: black;
+    background-color: var(--green);
+    color: var(--black);
   }
 
 #startQuiz {
   padding: 100px;
-  /* flex:1; */
-  /* height: 50%;
-  width: 50%; */
   border-radius: 50%;
-  /* margin-left: 50%;
-  margin-right: 50%; */
-  /* text-align: center;
-  align-items: center;
-  justify-content: center; */
   display:flex; 
-  /* flex-wrap: wrap; */
-  /* display:grid; */
-
-  /* background-color: #ffc401;
-  box-shadow: 5px 5px 10px 2px rgba(221, 186, 9, 0.58); */
-
   font-size: 4em;
-  /* color: black; */
-  /* position:; */
 }
 
 
 #participant {
   padding:6%;
-  /* font-size: 30%; */
 }
 
-:root {
-    --white: #ffffff;
-    --dark-blue: #10464de8;
-    --turquoise: #8ac9b4ef;
-    --border-radius: 5px;
-  }
-  /*variables have been declared in the root to make it easier to change the 3 main colours of the webpage.
-  The border radius has also been declared as a variable to make it easier to repeat the same style throughout 
-  the page.*/
+
   
   body {
     font-size: 16px;
@@ -113,7 +77,7 @@ button:hover {
     flex-direction: column;
     min-height: 100vh;
     justify-content: flex-start;
-    background-color: var(--turquoise);
+    background-color: var(--black);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -166,7 +130,7 @@ button:hover {
   }
   /*This refers to the style of the navigation bar in html*/
   nav a {
-    color: black;
+    color: var(--black);
     /* padding: 14px 20px; */
     text-decoration: none;
     text-align: center;
@@ -174,7 +138,7 @@ button:hover {
   /*This refers to the style of navigation links.*/
   nav a:hover {
     background-color: var(--white);
-    color: black;
+    color: var(--black);
     text-align: center;
   }
   /*nav a:hover allows the colour of the navigation links n background surrounding to change when the user hovers 
@@ -194,8 +158,7 @@ button:hover {
   }
 
   #message {
-    background-color: #64e11b90;
-    /* padding-top: 5px; */
+    background-color: var(--green);
   }
   
   #result {
@@ -205,17 +168,5 @@ button:hover {
   }
 
   #summary {
-    /* margin-top: 30%;
-    margin-bottom: 50px; */
     height: 1%;
   }
-  
- /* .stars {
-  font-size: 5em;
- } */
-  /* @media screen and (max-width: 768px) {
-    main,
-    nav,
-  } */
-  /*This allows the webpage to be responsive to different sized screens by changing the navigation bar so that it is 
-  stacked and displayed as columns when the screen is smaller.*/

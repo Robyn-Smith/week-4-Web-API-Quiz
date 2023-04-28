@@ -35,7 +35,7 @@ li {
   width: 100%;
   margin: 1px;
   margin-bottom: 4px;
-  line-height: 2em;
+  line-height: 1em;
   padding: 1px;
   color: rgb(82, 3, 70);
   /* text-align: center; */
@@ -50,12 +50,30 @@ button {
     border-radius: 5px;
     box-shadow: 5px 5px 10px 2px rgba(59, 231, 28, 0.489) ;
     color: #ffffff;
+    /* padding: 40px; */
 }
 button:hover {
     background-color: greenyellow;
     color: black;
   }
 
+#startQuiz {
+  padding: 100px;
+  border-radius: 50%;
+  margin-left: 50%;
+  margin-right: 50%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display:flex; 
+  flex-wrap: wrap;
+  display:grid;
+  background-color: #ffc401;
+  box-shadow: 5px 5px 10px 2px rgba(221, 186, 9, 0.58);
+  font-size: 4em;
+  /* color: black; */
+  /* position:; */
+}
 
 
 :root {
@@ -88,6 +106,10 @@ button:hover {
   repeating and makes sure that the size of the picture covers the entire screen.*/
   
   h1 {
+    /* text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center; */
     font-size: 2.5rem;
     margin-bottom: 10px;
    font-weight: bolder;
@@ -150,6 +172,8 @@ button:hover {
   nav {
     display: flex;
     background-color: palevioletred;
+    border-radius: 50%;
+    width: 100%;
   }
   /*This refers to the style of the navigation bar in html*/
   nav a {
@@ -172,25 +196,25 @@ button:hover {
   /*this refers to the style of the main element. Display flex allows aside, article and nested sections to be adjacent 
   to each other and allowed them to be responsive to screen size changes.*/
   
-  aside {
+  /* aside {
     flex: 1;
     background-color: #55a8a8dc;
     padding: 20px;
     text-align: center;
     width: 91.5%;
-  }
+  } */
   /*flex:1 allows the aside to grow once and width: fit-content tells the aside to respond to changes in content 
   and supports the webpage to respond to changes in screen size by changing size. */
   
-  aside img{
+  /* aside img{
     height: auto;
     width: 60%;
     border-radius: 30px;
-  }
+  } */
   /*This refers to the style of the profile picture image in the aside. The border radius has been changed so make 
   the corners round.*/
   
-  .projects {
+  /* .projects {
     flex: 1;
     padding: 50px;
     display: flex;
@@ -198,7 +222,7 @@ button:hover {
     justify-content: space-evenly;
     background-color: #ffffff42;
     width: fit-content;
-  }
+  } */
   /*The class 'projects' refers to the style of the article element and nested sections. An opaque white colour was 
   added to the background so it is less vibrant so the projects stand out but is still viable to the user. 
   Justify-content: space evenly spaces out the boxes evenly. Padding adds space between the boxes and all other 
@@ -271,9 +295,8 @@ button:hover {
   
   @media screen and (max-width: 768px) {
     main,
-    nav {
-      flex-direction: column;
-    }
+    nav,
+
   }
   /*This allows the webpage to be responsive to different sized screens by changing the navigation bar so that it is 
   stacked and displayed as columns when the screen is smaller.*/

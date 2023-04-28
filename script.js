@@ -59,59 +59,45 @@ var countdown;                                                    //variable rel
 //current quesion so know which question you are on this will always increment by one
 //in order to end game need to clear interval the countdown timer is global variable so any part of program can grab that to end game
 
-    
+
   function onPlayGame() {
     seconds = 75;                              //timer is set at 75 seconds.
     currentQuestion = -1;                      //This funtion must start at the first question. This is why current question
     score = 0;                                 //has been set to -1 as the first question was missing when this was set to zero.
-
     countdown = setInterval(function (){       //this starts the timer
         if (seconds > 0) {
             timer.textContent = seconds;
-
         } else {                                //this ends the counter the quiz
             endGame();
         }
         seconds--;                              //this decrements the timer
     }, 1000);
-
-    //hide home section - jsn comment
-    home.style.display = "none";
+    home.style.display = "none";                //this hides the home and end sections and shows the quiz, questions and anwers
     endPage.style.display = "none";
     quiz.style.display = 'flex';
-
-    //show the first question -jsn comment
-    showQuestion();
+    showQuestion();                             //displays first question
   }
+//This function sets the timer to 75 seconds and decrements (counts down). Once the seconds reach zero the quiz will end.
+//It also hides the home page and end page and displays the quiz page including the question.
 
   function endGame() {
-
-    // end countdown timer -jsn comment
-    clearInterval(countdown);
-
-    //clear the timer - jsn comment
-    timer.textContent = ""
-
-    //Hide the questions and show endPage- jsn comment
-    quiz.style.display = "none";
-    endPage.style.display = "flex"
-
-    //show the score- jsn comment
-    end.textContent = "Your Score is:" + score;
-
+    clearInterval(countdown);                               //this stops the timer
+    timer.textContent = ""                                  //this removes the timer so that the number is no longer displayed.
+    quiz.style.display = "none";                            //this hides the quiz and questions
+    endPage.style.display = "flex"                          //this reveals the end page
+    end.textContent = "Your total score is:" + score;       //this adds a string telling the user their total score and adds on the value of their score
   }
+//this function is used at the end of the game, it removes the timer and quiz from view, displays the final section and score
 
   function onSaveScore(event) {
-  
     var participant = document.getElementById("participant").value
-
-    //if we have valid participant, save the score to local storage -jsn comment
     if (participant !== "") {
         localStorage.setItem(participant, score);
-
         document.getElementById("participant").value = "";
     }
   }
+  //this funtion contains a local variable refering to the participant's initials. It checks if the user has entered 
+  //anything and if they have, saves it to local storage along with the score value.
 
   function onChosenAnswer(event) {
     var correctAnswer = questions[currentQuestion].answer;

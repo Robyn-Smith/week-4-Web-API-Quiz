@@ -52,7 +52,7 @@ var questions = [
   //result screen
   //all 3 of these going to be hiding and showing so need to work on straight away
 
-  var options = document.getElementById("options")
+  var choices = document.getElementById("choices")
   //answers and wrong choices
   var message = document.getElementById("message")
   //youve answered right or wrong
@@ -167,18 +167,13 @@ var questions = [
 
         displayMessage('Correct!✅')
 
-        //change to right answer
 
     } else {
-        // score--;
+        secondsLeft -= 5;
         document.getElementById('incorrect-sound').play();
-        displayMessage('Incorrect❎')
-        // countdownTimer(secondsLeft - 2)
-        // secondsLeft - 2 = timer;
-        // timer.secondsLeft(i-=2);
-        //criteria askstime to go faster if incorrect
-        //change string inncorrect?
+        displayMessage('Incorrect❎'); 
     }
+//criteria askstime to go faster if incorrect
 
     //call up next question - jsn comment
     displayQuestion();
@@ -215,12 +210,12 @@ var questions = [
     document.getElementById("question").textContent = question.title
     //text content adds in question
 
-    //clear any existing options - jsn comment
-    options.innerHTML = "";
+    //clear any existing choices - jsn comment
+    choices.innerHTML = "";
     //can use text content instead?
     //removes previous question answers
 
-    //load through the choices and output the new possible options - jsn comment
+    //load through the choices and output the new possible choices - jsn comment
     for (var i = 0; i < question.choices.length; i++) {
 
         var option = document.createElement("li");
@@ -229,9 +224,9 @@ var questions = [
         option.onclick = onSelectAnswer;
         //assigned event handler
         option.classList.add("option");
-        //added sub options to html
+        //added sub choices to html
 
-        options.appendChild(option);
+        choices.appendChild(option);
     }
     
   }

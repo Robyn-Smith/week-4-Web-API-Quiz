@@ -8,8 +8,8 @@
   the page.*/
   
 #timer{
-font-size: 4rem;
-font-weight: bold;
+  font-size: 4rem;
+  font-weight: bold;
 }
 
 li {
@@ -32,7 +32,6 @@ li {
   line-height: 1em;
   padding: 1px;
   color: rgb(82, 3, 70);
-  /* text-align: center; */
 }
 
 .hidden {
@@ -62,25 +61,22 @@ button:hover {
   font-size: 4em;
 }
 
-
 #participant {
   padding:6%;
 }
 
-
-  
-  body {
-    font-size: 16px;
-    font-family: 'Courier New', Courier, monospace;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    justify-content: flex-start;
-    background-color: var(--black);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+body {
+  font-size: 16px;
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: flex-start;
+  background-color: var(--black);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
   /*The body contains styling for the whole webpage including font size throughout, display attributes and background 
   attributes. Flex direction has been set to columns so that the website is responsive to changes in screen size and 
   appears as coloumns. Display: flex and justify-content: flex-start also support the page in responding to changes in
@@ -88,68 +84,67 @@ button:hover {
   the image is unable to load. Background position, repeat and size centres the background image, stops it from 
   repeating and makes sure that the size of the picture covers the entire screen.*/
   
-  h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-   font-weight: bolder;
-   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-   color: var(--white);
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: bolder;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--white);
   }
   /* h1 is bold and has been given a larger font size compared to other headings on the page so that it is clear, 
   visable and stands out. Margin bottom gives the heading space under the text. Font family is included to ensure 
   that a similar font will be visable if the font chosen is not available for different browers*/
   
-  header {
-    padding: 20px;
-    text-align: center;
-    background: rgba(128, 0, 128, 0.326);
-    color: var(--white);
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
+header {
+  padding: 20px;
+  text-align: center;
+  background: rgba(128, 0, 128, 0.326);
+  color: var(--white);
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
   }
   /*header refers to not only the style of the header element at the top of the page but also the headers 
   above each project.*/
   
-  nav {
-    display: flex;
-    background-color: rgba(216, 112, 147, 0.498);
-    justify-content: center;
-    margin-top: 20px;
+nav {
+  display: flex;
+  background-color: rgba(216, 112, 147, 0.498);
+  justify-content: center;
+  margin-top: 20px;
   }
   /*This refers to the style of the navigation bar in html*/
-  nav a {
-    color: var(--black);
-    /* padding: 14px 20px; */
-    text-decoration: none;
-    text-align: center;
+nav a {
+  color: var(--black);
+  text-decoration: none;
+  text-align: center;
   }
   /*This refers to the style of navigation links.*/
-  nav a:hover {
-    background-color: var(--white);
-    color: var(--black);
-    text-align: center;
+nav a:hover {
+  background-color: var(--white);
+  color: var(--black);
+  text-align: center;
   }
   /*nav a:hover allows the colour of the navigation links n background surrounding to change when the user hovers 
   over them*/
   
-  main {
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    display:flex; 
-    flex-wrap: wrap;
+main {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display:flex; 
+  flex-wrap: wrap;
   }
 
-  #message {
-    background-color: var(--green);
+#message {
+  background-color: var(--green);
   }
   
-  #result {
-    justify-content: space-evenly;
-    width: 100%;
-    padding: 60px;
+#result {
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 60px;
   }
 
-  #summary {
-    height: 1%;
+#summary {
+  height: 1%;
   }

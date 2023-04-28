@@ -1,52 +1,137 @@
-/* :root {
-    --black: #000000;
-    --white: #ffffff;
+/*reset.css file has been added so that there is a default style of the page if there are any issues with browers
+and unavailable styles or if any changes or misates are made to style.css*/
+
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --green: #b6f754;
   }
 
-body {
-    font-size: 16px;
-    font-family: 'Courier New', Courier, monospace;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    justify-content: flex-start;
-    background-color: var(--black);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  h1 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-    font-weight: bolder;
-    font-family:'Courier New', Courier, monospace;
-    text-align: center;
+#timer{
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+li {
+  font-size: large;
+  font-weight: bolder;
+  text-decoration: none;
+  list-style-type: none;
+  text-align: center;
+  padding: 6px;
+  margin-top:5%;
+}
+
+#quiz {
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.537);
+  justify-content: center;
+  width: 100%;
+  margin: 1px;
+  margin-bottom: 4px;
+  line-height: 1em;
+  padding: 1px;
+  color: rgb(82, 3, 70);
+}
+
+.hidden {
+  display: none;
+}
+
+button {
+    background-color: rgba(163, 63, 135, 0.845);
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px 2px var(--green) ;
     color: var(--white);
+    padding-top: 4%;
+    padding-bottom: 4%;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 20px;
+}
+button:hover {
+    background-color: var(--green);
+    color: var(--black);
   }
-  nav {
-    border-radius:30%;
-    display: flex;
-    background-color: grey;
-    margin-top: 0px;
-  } */
-  /*This refers to the style of the navigation bar in html*/
-  /* nav a {
-    border-radius:30%;
-    color: black;
-    padding: 14px 20px;
-    text-decoration: none;
-    text-align: center;
-    margin-left: 45%;
-    margin-right: 45%;
-  } */
-  /*This refers to the style of navigation links.*/
-  /* nav a:hover {
-    background-color: var(--white);
-    color: black;
+
+#startQuiz {
+  padding: 100px;
+  border-radius: 50%;
+  display:flex; 
+  font-size: 4em;
+}
+
+#participant {
+  padding:6%;
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: flex-start;
+  background-color: var(--black);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+  
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: bolder;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--white);
   }
-  @media screen and (max-width: 768px) { */
-    /* main, */
-    /* nav {
-      flex-direction: column;
-    } */
-  /* } */
+  
+header {
+  padding: 20px;
+  text-align: center;
+  background: rgba(128, 0, 128, 0.326);
+  color: var(--white);
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  }
+  
+nav {
+  display: flex;
+  background-color: rgba(216, 112, 147, 0.498);
+  justify-content: center;
+  margin-top: 20px;
+  }
+
+nav a {
+  color: var(--black);
+  text-decoration: none;
+  text-align: center;
+  }
+
+nav a:hover {
+  background-color: var(--white);
+  color: var(--black);
+  text-align: center;
+  }
+
+main {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display:flex; 
+  flex-wrap: wrap;
+  }
+
+#message {
+  background-color: var(--green);
+  }
+  
+#result {
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 60px;
+  }
+
+#summary {
+  height: 1%;
+  }

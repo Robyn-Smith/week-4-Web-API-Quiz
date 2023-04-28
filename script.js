@@ -35,7 +35,7 @@ var questions = [
   ];
 
 //buttons.....
-  var startQuiz = document.getElementById("startQuiz")
+  var beginQuiz = document.getElementById("beginQuiz")
   // jsn reccoments doing just this first
   var saveScore = document.getElementById("saveScore")
  // var viewScore = document.getElementById("viewScore") ..... not being used rn
@@ -138,7 +138,7 @@ var questions = [
 
   }
 
-  function onSaveScore(e) {
+  function onSaveScore(event) {
     //e standing for event?
     var participant = document.getElementById("participant").value
 
@@ -155,9 +155,9 @@ var questions = [
     //link to scores.html............................................................. not being used rn
  // }
 
-  function onSelectAnswer(e) {
+  function onSelectAnswer(event) {
     var correctAnswer = questions[currentQuestion].answer;
-    var userAnswer = e.target.textContent;
+    var userAnswer = event.target.textContent;
     //e means event?
   
 
@@ -173,6 +173,10 @@ var questions = [
         // score--;
         document.getElementById('incorrect-sound').play();
         displayMessage('Incorrect❎')
+        // countdownTimer(secondsLeft - 2)
+        // secondsLeft - 2 = timer;
+        // timer.secondsLeft(i-=2);
+        //criteria askstime to go faster if incorrect
         //change string inncorrect?
     }
 
@@ -232,7 +236,7 @@ var questions = [
     
   }
 
-startQuiz.addEventListener("click", onStartGame);
+beginQuiz.addEventListener("click", onStartGame);
 //jsn says start with this
 saveScore.addEventListener("click", onSaveScore);
 //viewScore.addEventListener("click", onViewScores); ------------------------
@@ -253,62 +257,3 @@ document.getElementById("summary").style.backgroundColor = "rgba(255, 255, 255, 
 //quiz box
 quiz.setAttribute("style", "font-size: 25px; font-weight: bold; border-radius: 5px;");
 document.getElementById("quiz").style.backgroundColor = "rgba(255, 255, 255, 0.537)";
-// document.getElementById("options").style.padding = "50px 10px 20px 30px";
-// document.getElementById("options").style.backgroundColor = "rgba(255, 255, 255, 00)";
-// document.getElementById("options").style.display = "block";
-
-
-// document.getElementById("question").style.padding = "50px 10px 20px 30px";
-// document.getElementById("question").style.display = "none";
-
-// for (var i = 0; i < localStorage.length; i++) {
-
-// var participant = localStorage.key(i);
-// var score = localStorage.getItem(participant);
-
-//     var result = document.createElement("div");
-//     result.classList.add("result");
-
-//     result.innerHTML = '<div class="score-item">${participant}</div>'
-//           '<div class="score-item">${score}</div>'
-    
-    
-
-//     scoresheet.appendChild(result);
-// }
-
-// function displayScores() {
-//   var  = JSON.parse(localStorage.getItem("studentGrade"));
-//   if (lastGrade !== null) {
-//     document.querySelector(".message").textContent = lastGrade.student + 
-//     " received a/an " + lastGrade.grade
-//   }
-// }
-
-//add scores.js for local storage
-//var scoresheet = document.getElementById("scoresheet")
-//var backtoQuiz = document.getElementById("backtoquiz") ----- used links instead of buttons
-
-//function onBackToQuiz() {
-    //window.location.href = "index.html";
-//}
-//...................................................................................................
-//// not workinggg need to change all of this.......................
-
-// for (var i = 0; i < localStorage.length; i++) {
-
-//var participant = localStorage.key(i);
-//var score = localStorage.getItem(participant);
-
-//     var result = document.createElement("div");
-//     result.classList.add("result");
-
-//     //result.innerHTML = '<div class="score-item">${participant}</div>'
-//            // '<div class="score-item">${score}</div>'
-    
-    
-
-//     scoresheet.appendChild(result);
-// }
-
-//backtoQuiz.addEventListener("click", onBackToQuiz);

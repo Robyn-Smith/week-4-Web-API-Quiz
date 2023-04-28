@@ -20,7 +20,6 @@ li {
   text-align: center;
   padding: 6px;
   margin-top:5%;
-  /* justify-content: space-between; */
 }
 
 #quiz {
@@ -90,10 +89,6 @@ button:hover {
   repeating and makes sure that the size of the picture covers the entire screen.*/
   
   h1 {
-    /* text-align: center;
-    justify-content: center;
-    display: flex;
-    align-items: center; */
     font-size: 2.5rem;
     margin-bottom: 10px;
    font-weight: bolder;
@@ -111,7 +106,6 @@ button:hover {
     color: var(--white);
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
-    /* display: none; */
   }
   /*header refers to not only the style of the header element at the top of the page but also the headers 
   above each project.*/
@@ -119,14 +113,8 @@ button:hover {
   nav {
     display: flex;
     background-color: rgba(216, 112, 147, 0.498);
-    /* border-radius: 50%; */
-    /* width: 100%; */
-    /* text-align: center; */
     justify-content: center;
     margin-top: 20px;
-    /* width: 70px; */
-    /* margin-left: 50%;
-    margin-right: 50%; */
   }
   /*This refers to the style of the navigation bar in html*/
   nav a {
@@ -145,11 +133,6 @@ button:hover {
   over them*/
   
   main {
-    /* display: flex;
-    margin-left: 20%;
-    margin-right: 20%; */
-    /* margin-left: 29%;
-    margin-right: 29%; */
     text-align: center;
     align-items: center;
     justify-content: center;

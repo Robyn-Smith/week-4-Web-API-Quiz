@@ -170,7 +170,7 @@ var questions = [
         //change to right answer
 
     } else {
-        score--;
+        // score--;
         document.getElementById('incorrect-sound').play();
         displayMessage('Incorrect❎')
         //change string inncorrect?

@@ -1,9 +1,7 @@
 :root {
     --black: #000000;
     --white: #ffffff;
-    /* --dark-blue: #10464de8;
-    --turquoise: #8ac9b4ef; */
-    /* --border-radius: 5px; */
+    --gray: #808080;
   }
   /*variables have been declared in the root to make it easier to change the 3 main colours of the webpage.
   The border radius has also been declared as a variable to make it easier to repeat the same style throughout 
@@ -30,29 +28,18 @@
   
   header {
     position:flex;
-    /* margin: 0%, 50%, 0%, 50%; */
     margin-top: 50px;
     margin-left: 50%;
     margin-bottom: 0px;
     padding: 0%;
-    
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     height: 40%;
     width: 80%;
     border-radius: 150px 150px 0 0;
-    background-color: gray;
-    
-    /* justify-content:center; */
+    background-color: var(--gray);
     text-align: center;
-
-    /* padding: 20px; */
-    /* text-align: center;
-    background: var(--dark-blue);
-    color: var(--white);
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold; */
   }
   /*header refers to not only the style of the header element at the top of the page but also the headers 
   above each project.*/
@@ -72,13 +59,13 @@
   nav {
     border-radius:30%;
     display: flex;
-    background-color: grey;
+    background-color: var(--gray);
     margin-top: 0px;
   }
   /*This refers to the style of the navigation bar in html*/
   nav a {
     border-radius:30%;
-    color: black;
+    color: var(--black);
     padding: 14px 20px;
     text-decoration: none;
     text-align: center;
@@ -88,22 +75,12 @@
   /*This refers to the style of navigation links.*/
   nav a:hover {
     background-color: var(--white);
-    color: black;
+    color: var(--black);
   }
   /*nav a:hover allows the colour of the navigation links n background surrounding to change when the user hovers 
   over them*/
   
   main {
-    /* display: flex;
-    height: 90%;*/
-    /* width: ; */
-    /*justify-content: center; */
-/* 
-    padding-top: 50px;
-    padding bottom: 100px; */
-    /* border-bottom-width: 100%;
-    border-top-width: 50%; */
-    /* transform: ; */
     margin-left: 20%;
     margin-right: 20%;
     animation-name: spin;
@@ -111,38 +88,25 @@
     animation-direction: alternate;
     animation-iteration-count: 400;
 }
-
   /*this refers to the style of the main element. Display flex allows aside, article and nested sections to be adjacent 
   to each other and allowed them to be responsive to screen size changes.*/
 
 li {
-    /* font-size: large;
-    font-weight: bolder; */
     text-decoration: none;
     list-style-type: none;
     text-align: center;
-    /* padding: 50px; */
-    
 }
 
 .participant {
   font-size: 30px;
   text-decoration: underline;
   font-weight: bolder;
-
 }
 
 .score {
   font-size: 50px;
   padding-bottom: 50px;
 }
-
-  @media screen and (max-width: 768px) {
-    /* main, */
-    /* nav {
-      flex-direction: column;
-    } */
-  }
 
   @keyframes spin{
     10% {background-color: rgba(255, 0, 0, 0.573);}

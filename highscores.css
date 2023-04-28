@@ -126,14 +126,14 @@ li {
 }
 
 .participant {
-  font-size: 70px;
+  font-size: 30px;
   text-decoration: underline;
   font-weight: bolder;
 
 }
 
 .score {
-  font-size: 60px;
+  font-size: 50px;
   padding-bottom: 50px;
 }
 

@@ -57,7 +57,7 @@ button {
     font-size: 20px;
 }
 button:hover {
-    background-color: greenyellow;
+    background-color: rgb(182, 247, 84);
     color: black;
   }
 
@@ -75,12 +75,15 @@ button:hover {
   display:flex; 
   /* flex-wrap: wrap; */
   /* display:grid; */
-  background-color: #ffc401;
-  box-shadow: 5px 5px 10px 2px rgba(221, 186, 9, 0.58);
+
+  /* background-color: #ffc401;
+  box-shadow: 5px 5px 10px 2px rgba(221, 186, 9, 0.58); */
+
   font-size: 4em;
   /* color: black; */
   /* position:; */
 }
+
 
 #participant {
   padding:6%;

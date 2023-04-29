@@ -5,16 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>⭐Coding Quiz⭐</title>
-    <link rel="stylesheet" href="reset.css" />
-    <!--reset is added first so that changes to style.css will overwrite this file as it is just a default-->
+    <link rel="stylesheet" href="reset.css" /> <!--reset is added first so that changes to style.css will overwrite this file as it is just a default-->
     <link rel="stylesheet" href="style.css" />
     <audio id="correct-sound" src="assets/correct.wav"></audio>
-    <audio id="incorrect-sound" src="assets/incorrect.wav"></audio>
+    <audio id="incorrect-sound" src="assets/incorrect.wav"></audio> <!--sounds added to JavaScript-->
+    
 </head>
 <style type="text/css" class="background-image">
     body{
       background-image: url("assets/pink-space.jpg") }
-  </style> 
+  </style> <!--background image-->
+  
 <body>
     <header>  
         <div id = 'timer'> </div>  
@@ -22,43 +23,33 @@
         <!--countdown timer can add justify content and space inbetween to flip maybe change this to countdown-->
 
     <main>
-        <div id="home">
+        <div id="home"><!--this is viable when the website is open and hidden after clicking start-->
             <h1>👽Welcome to Coding Quiz👽</h1>
             <button id="beginQuiz" class="button"> Begin Quiz</button>
-            <!-- maybe change to ready to start the quiz (im ready button?) changed btn to button-->
         </div>
-        <!--this is viable when the website is open and hidden after clicking start-->
 
-        <section id="quiz" class="hidden">
-            <!--This will start off hidden but when user clicks start will be visable-->
-            <div id="question"></div>
-
-            <div id="choices"></div>
-            <!--answers and muliple choice options maybe change to choices-->
-
-            <div id="message"></div>
-            <!--correct or wrong message tell the user what they scored-->
+        <section id="quiz" class="hidden">  <!--This will start off hidden but when user clicks start will be visable-->
+            <div id="question"></div>       <!-- questions added via an array in JavaScript -->
+            <div id="choices"></div>        <!--multiple choice options for user to select-->
+            <div id="message"></div>        <!--message tells the user if they selected right or wrong answer-->
+            
         </section>
 
-        <div id="endPage" class="hidden"> 
+        <div id="endPage" class="hidden">   <!--this starts off hidden but is visable at the end when the quiz is over-->
             <div id="end"></div>
-
-            <input type="text" id="participant" placeholder="Enter your initials here" />
-            
-            <button id = "saveScore" class="button">Save Score</button>
-            <!--changed btn to button-->
-           
-            <button id="tryAgain" class="button">Try Again</button>
+            <input type="text" id="participant" placeholder="Enter your initials here" /> <!--box where participant enters initials-->
+            <button id = "saveScore" class="button">Save Score</button> <!--this is how participant saves their score-->
+            <button id="tryAgain" class="button">Try Again</button> <!--this starts the quiz again-->
         </div>
-        <!--this starts off hidden but is visable at the end when the quiz is over-->
+        
     </main>
 
      <nav id= 'highscores'>
             <a href="highscores.html">✨Highscores✨</a>
     </nav> 
 
-<!-- added link to JavaScript at the bottom of the page so that it renders last and therefore is less likely to error -->
-    <script src="script.js"></script>
+
+    <script src="script.js"></script>   <!-- added link to JavaScript at the bottom of the page so that it renders last and therefore is less likely to error -->
 
 </body>
 </html>

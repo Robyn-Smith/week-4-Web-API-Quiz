@@ -156,8 +156,3 @@ localStorage.setItem("participant", JSON.stringify(score));
 //local storage can only store strings so JSON.stringify was used to convert the score into a string data type 
 //rather than a number to then save both that and the participant's initials in local storage.
 
-//styling
-end.setAttribute("style", "font-size: 25px; font-weight: bold; border-radius: 5px;");         
-document.getElementById("end").style.backgroundColor = "rgba(255, 255, 255, 0.537)";
-//this is the styling of the "your total score is" which has been given a white slightly transparent background, 
-//rounded edges and a thicker larger font

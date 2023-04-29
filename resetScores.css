@@ -1,0 +1,132 @@
+/*reset.css file has been added so that there is a default style of the page if there are any issues with browers
+and unavailable styles or if any changes or misates are made to style.css*/
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --gray: #808080;
+  }
+  /*variables have been declared in the root to make it easier to change the 3 main colours of the webpage.*/
+
+  body {
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: flex-start;
+    background-color: var(--black);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  /*The body contains styling for the whole webpage including font size throughout, display attributes and background 
+  attributes. Flex direction has been set to columns so that the website is responsive to changes in screen size and 
+  appears as coloumns. Display: flex and justify-content: flex-start also support the page in responding to changes in
+  screen size. Background colour has also been added despite having a background image incase of slow rendering or if 
+  the image is unable to load. Background position, repeat and size centres the background image, stops it from 
+  repeating and makes sure that the size of the picture covers the entire screen.*/
+  
+  header {
+    position:flex;
+    margin-top: 50px;
+    margin-left: 50%;
+    margin-bottom: 0px;
+    padding: 0%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 40%;
+    width: 80%;
+    border-radius: 150px 150px 0 0;
+    background-color: var(--gray);
+    text-align: center;
+  }
+  /*refers to styling of header, by using variables the grey colour can easily be changed. Transform, border radius 
+  width and height have all been changed to try to make an abstract ufo shape by creating a semi circle. Using percentages 
+  as messurements supports the page's response to changes in screen size with the semi circle streching to fit the size of 
+  the screen. Margins support the position of the header*/
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-weight: bolder;
+    text-decoration: underline;
+    font-family:'Courier New', Courier, monospace;
+    text-align: center;
+  }
+  /* This refers to the heading "highscores" located in the header. Text decoration has been added to the heading 
+  so that it stands out being underlined. Font family is included to ensure that a similar font will be visable 
+  if the font chosen is not available for different browers*/
+
+  nav {
+    border-radius:30%;
+    display: flex;
+    background-color: var(--gray);
+    margin-top: 0px;
+  }
+  /*This refers to the style of the navigation bar in highscores.html. It is the bottom half of the abstract ufo.
+  Using percentages as mesements supports the page's response to changes in screen size with the semi circle streching 
+  to fit the size of the screen.*/
+  nav a {
+    border-radius:30%;
+    color: var(--black);
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+    margin-left: 45%;
+    margin-right: 45%;
+  }
+  /*This refers to the style of navigation link.*/
+  nav a:hover {
+    background-color: var(--white);
+    color: var(--black);
+  }
+  /*nav a:hover allows the colour of the navigation link text and background surrounding to change when the user hovers 
+  over them*/
+  
+  main {
+    margin-left: 20%;
+    margin-right: 20%;
+    animation-name: rainbow;
+    animation-duration: 5s;
+    animation-direction: alternate;
+    animation-iteration-count: 400;
+}
+  /*this refers to the style of the main element, in this case the ufo tractor beam where the list elements are nested
+  nimation has been added to make the page more fun and colourful for the user.*/
+
+li {
+    text-decoration: none;
+    list-style-type: none;
+    text-align: center;
+}
+/* this refers to the overall styling of  list elements, (initials and scores)*/
+
+.participant {
+  font-size: 30px;
+  text-decoration: underline;
+  font-weight: bolder;
+}
+/* this refers to just the participants initials styling*/
+
+.score {
+  font-size: 50px;
+  padding-bottom: 50px;
+}
+/* this refers to the styling of just the scores styling*/
+
+  @keyframes rainbow{
+    10% {background-color: rgba(255, 0, 0, 0.573);}
+    20% {background-color: rgba(255, 166, 0, 0.537);}
+    30% {background-color: rgba(255, 255, 0, 0.537);}
+    40% {background-color: rgba(144, 238, 144, 0.537);}
+    50% {background-color: rgba(0, 128, 0, 0.537)}
+    60% {background-color: rgba(173, 216, 230, 0.537);}
+    70% {background-color: rgba(0, 0, 255, 0.537);}
+    80% {background-color: rgba(238, 130, 238, 0.537);}
+    90% {background-color: rgba(128, 0, 128, 0.537);}
+    100% {background-color: rgba(255, 192, 203, 0.537);}
+    30% {background-color: rgba(216, 112, 147, 0.537);}
+    40% {background-color: rgba(255, 255, 255, 0.537);}
+}
+/* this adds the rainbow flashing  animation to the main section*/

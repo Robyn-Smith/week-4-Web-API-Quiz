@@ -85,9 +85,9 @@ h1 {
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: var(--white);
   }
-  /* h1 is bold and has been given a larger font size compared to other headings on the page so that it is clear, 
-  visable and stands out. Margin bottom gives the heading space under the text. Font family is included to ensure 
-  that a similar font will be visable if the font chosen is not available for different browers*/
+  /* h1 is bold and has been given a larger font size so that it is clear, visable and stands out. Margin bottom 
+  gives the heading space under the text. Font family is included to ensure that a similar font will be visable if 
+  the font chosen is not available for different browers*/
   
 header {
   padding: 20px;
@@ -97,8 +97,7 @@ header {
   font-family: 'Courier New', Courier, monospace;
   font-weight: bold;
   }
-  /*header refers to not only the style of the header element at the top of the page but also the headers 
-  above each project.*/
+  /*header where the timer is located*/
   
 nav {
   display: flex;
@@ -113,7 +112,7 @@ nav a {
   text-decoration: none;
   text-align: center;
   }
-  /*This refers to the style of navigation links.*/
+  /*This refers to the style of navigation link.*/
 nav a:hover {
   background-color: var(--white);
   color: var(--black);

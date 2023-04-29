@@ -3,9 +3,7 @@
     --white: #ffffff;
     --gray: #808080;
   }
-  /*variables have been declared in the root to make it easier to change the 3 main colours of the webpage.
-  The border radius has also been declared as a variable to make it easier to repeat the same style throughout 
-  the page.*/
+  /*variables have been declared in the root to make it easier to change the 3 main colours of the webpage.*/
 
   body {
     font-size: 16px;
@@ -41,8 +39,10 @@
     background-color: var(--gray);
     text-align: center;
   }
-  /*header refers to not only the style of the header element at the top of the page but also the headers 
-  above each project.*/
+  /*refers to styling of header, by using variables the grey colour can easily be changed. Transform, border radius 
+  width and height have all been changed to try to make an abstract ufo shape by creating a semi circle. Using percentages 
+  as messurements supports the page's response to changes in screen size with the semi circle streching to fit the size of 
+  the screen. Margins support the position of the header*/
 
   h1 {
     font-size: 2rem;
@@ -52,7 +52,7 @@
     font-family:'Courier New', Courier, monospace;
     text-align: center;
   }
-  /* h2 refers to the 'About me' heading in the aside element. Text decoration has been added to the heading 
+  /* This refers to the heading "highscores" located in the header. Text decoration has been added to the heading 
   so that it stands out being underlined. Font family is included to ensure that a similar font will be visable 
   if the font chosen is not available for different browers*/
 
@@ -62,7 +62,9 @@
     background-color: var(--gray);
     margin-top: 0px;
   }
-  /*This refers to the style of the navigation bar in html*/
+  /*This refers to the style of the navigation bar in highscores.html. It is the bottom half of the abstract ufo.
+  Using percentages as mesements supports the page's response to changes in screen size with the semi circle streching 
+  to fit the size of the screen.*/
   nav a {
     border-radius:30%;
     color: var(--black);
@@ -72,43 +74,46 @@
     margin-left: 45%;
     margin-right: 45%;
   }
-  /*This refers to the style of navigation links.*/
+  /*This refers to the style of navigation link.*/
   nav a:hover {
     background-color: var(--white);
     color: var(--black);
   }
-  /*nav a:hover allows the colour of the navigation links n background surrounding to change when the user hovers 
+  /*nav a:hover allows the colour of the navigation link text and background surrounding to change when the user hovers 
   over them*/
   
   main {
     margin-left: 20%;
     margin-right: 20%;
-    animation-name: spin;
+    animation-name: rainbow;
     animation-duration: 5s;
     animation-direction: alternate;
     animation-iteration-count: 400;
 }
-  /*this refers to the style of the main element. Display flex allows aside, article and nested sections to be adjacent 
-  to each other and allowed them to be responsive to screen size changes.*/
+  /*this refers to the style of the main element, in this case the ufo tractor beam where the list elements are nested
+  nimation has been added to make the page more fun and colourful for the user.*/
 
 li {
     text-decoration: none;
     list-style-type: none;
     text-align: center;
 }
+/* this refers to the overall styling of  list elements, (initials and scores)*/
 
 .participant {
   font-size: 30px;
   text-decoration: underline;
   font-weight: bolder;
 }
+/* this refers to just the participants initials styling*/
 
 .score {
   font-size: 50px;
   padding-bottom: 50px;
 }
+/* this refers to the styling of just the scores styling*/
 
-  @keyframes spin{
+  @keyframes rainbow{
     10% {background-color: rgba(255, 0, 0, 0.573);}
     20% {background-color: rgba(255, 166, 0, 0.537);}
     30% {background-color: rgba(255, 255, 0, 0.537);}
@@ -122,3 +127,4 @@ li {
     30% {background-color: rgba(216, 112, 147, 0.537);}
     40% {background-color: rgba(255, 255, 255, 0.537);}
 }
+/* this adds the rainbow flashing  animation to the main section*/

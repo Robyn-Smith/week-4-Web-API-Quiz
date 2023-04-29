@@ -161,8 +161,3 @@ end.setAttribute("style", "font-size: 25px; font-weight: bold; border-radius: 5p
 document.getElementById("end").style.backgroundColor = "rgba(255, 255, 255, 0.537)";
 //this is the styling of the "your total score is" which has been given a white slightly transparent background, 
 //rounded edges and a thicker larger font
-
-quiz.setAttribute("style", "font-size: 25px; font-weight: bold; border-radius: 5px;");
-document.getElementById("quiz").style.backgroundColor = "rgba(255, 255, 255, 0.537)";
-//this is the styling of the quiz, questions and answers which has also been given a slightly transparent white 
-//background a largeer font and round edges

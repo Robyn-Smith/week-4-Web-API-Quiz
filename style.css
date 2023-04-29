@@ -146,5 +146,10 @@ main {
   font-weight: bold; 
   border-radius: 5px;   
   }
+  @media screen and (max-width: 768px) {
+    #endPage {
+      flex-direction: column;
+    }
+  }
   /* //this is the styling of the "your total score is" which has been given a white slightly transparent background, 
   //rounded edges and a thicker larger font */

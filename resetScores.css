@@ -102,12 +102,12 @@ li {
 }
 /* this refers to the overall styling of  list elements, (initials and scores)*/
 
-.participant {
+.player {
   font-size: 30px;
   text-decoration: underline;
   font-weight: bolder;
 }
-/* this refers to just the participants initials styling*/
+/* this refers to just the players initials styling*/
 
 .score {
   font-size: 50px;

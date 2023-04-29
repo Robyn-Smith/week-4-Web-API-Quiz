@@ -136,13 +136,13 @@ function endGame() {
 //this function is used at the end of the game, it removes the timer and quiz from view, displays the final section and score
 
 function onSaveScore(event) {
-  var participant = document.getElementById("participant").value
-    if (participant !== "") {
-      localStorage.setItem(participant, score);
-      document.getElementById("participant").value = "";
+  var player = document.getElementById("player").value
+    if (player !== "") {
+      localStorage.setItem(player, score);
+      document.getElementById("player").value = "";
   }
 }
-//this funtion contains a local variable refering to the participant's initials. It checks if the user has entered 
+//this funtion contains a local variable refering to the player's initials. It checks if the user has entered 
 //anything and if they have, saves it to local storage along with the score value.
 
 beginQuiz.addEventListener("click", onPlayGame);
@@ -151,7 +151,7 @@ tryAgain.addEventListener("click", onPlayGame);
 //the event listeners have been added to the end of the code so that they can use the previous code functions to 
 //carry out the desired actions when the buttons are clicked.
 
-localStorage.setItem("participant", JSON.stringify(score));
+localStorage.setItem("player", JSON.stringify(score));
 //local storage can only store strings so JSON.stringify was used to convert the score into a string data type 
-//rather than a number to then save both that and the participant's initials in local storage.
+//rather than a number to then save both that and the player's initials in local storage.
 

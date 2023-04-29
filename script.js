@@ -125,7 +125,6 @@ function showMessage(msg) {
       message.textContent = " ";
   }, 1000);
 }
-//this function adds the message for one second
 
 function endGame() {
     clearInterval(countdown);                               //this stops the timer
